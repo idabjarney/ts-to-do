@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   width: 548px;
-  background-color: #828282;
+  background-color: #b1b1b1;
   border-radius: 4px;
   overflow: hidden;
+  box-shadow: inset -1px 2px 5px 0px rgba(0,0,0,0.34);
+
   header {
     display: flex;
     align-items: center;
@@ -31,12 +33,18 @@
       caret-color: #374D7C;
       color: #374D7C;
       font-size: 18px;
+      box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.34);
     }
     .submit-btn {
       height: 100%;
       width: 40px;
       background-color: #FF4667;
       border: none;
+      box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.34);
+      transition: 200ms;
+      &:hover, &:active {
+        background-color:  #fc5574;
+      }
       i {
         font-size: 20px;
       }
@@ -55,6 +63,7 @@
       margin-right: 4px;
       padding: 8px 8px;
       border-radius: 3px;
+      box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.34);
       color: #566585;
       &.completed-task {
         text-decoration: line-through;
@@ -63,6 +72,7 @@
       &:nth-child(odd) {
         margin-top: 4px;
         margin-bottom: 4px;
+        
       }
       .to-do-selector {
         height: 15px;
@@ -86,6 +96,8 @@
         margin-left: auto;
         background-color: transparent;
         border: none;
+        width: 20px;
+        height: 20px;
         i {
           color: #374D7C;
           font-size: 17px;
