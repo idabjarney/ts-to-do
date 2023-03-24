@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   width: 548px;
-  background-color: #b1b1b1;
+  background-color: #FBF9F9;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: inset -1px 2px 5px 0px rgba(0,0,0,0.34);
+  box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.44);
 
   header {
     display: flex;
@@ -27,20 +27,20 @@
       height: 100%;
       width: auto;
       border: none;
-      background-color: #D9D9D9;
+      background-color: #f5f5f5;
       padding: 0 15px;
       outline: none;
       caret-color: #374D7C;
       color: #374D7C;
       font-size: 18px;
-      box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.34);
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.24);
     }
     .submit-btn {
       height: 100%;
       width: 40px;
       background-color: #FF4667;
       border: none;
-      box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.34);
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.24);
       transition: 200ms;
       &:hover, &:active {
         background-color:  #fc5574;
@@ -56,9 +56,10 @@
     width: 100%;
     overflow: auto;
     padding-bottom: 40px;
+    margin-top: 10px;
     .to-do-el {
       display: flex;
-      background-color: #CAC9C9;
+      background-color: #EFEFEF;
       margin-left: 4px;
       margin-right: 4px;
       padding: 8px 8px;
@@ -67,25 +68,34 @@
       color: #566585;
       &.completed-task {
         text-decoration: line-through;
-        background-color: #EEE7C0;
+        background-color: #f5d8e6;
       }
       &:nth-child(odd) {
-        margin-top: 4px;
-        margin-bottom: 4px;
-        
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #e7ecf0;
+        &.completed-task {
+          text-decoration: line-through;
+          background-color: #e2c6d4;
+        }
       }
       .to-do-selector {
         height: 15px;
         width: 15px;
         min-width: 15px;
         border-radius: 100%;
-        background-color: #EFEFEF;
+        background-color: #f1f1f1;
         border: none;
+        box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,0.54);
         margin-right: 8px;
         margin-top: 4px;
+        transition: 200ms;
+        &:hover {
+          background-color: #f3c1ca;
+        }
         &.radio-toggled {
-          border: 2px solid #F6F6F6;
           background-color: #FF4667;
+          box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,0.54);
         }
       }
       p {
@@ -102,6 +112,7 @@
           color: #0082E0;
           font-size: 17px;
           transition: 300ms;
+
           &:hover {
             color: #24a1fa;
           }
